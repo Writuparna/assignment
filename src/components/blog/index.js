@@ -61,10 +61,9 @@ const Blog = () => {
           <div className="blockList">
             {filterBlog.length > 0 ? (
               filterBlog.map((blog) => (
-                <div className="block" key={blog.id}>
+                <Link className="block" key={blog.id} to={"/blogs/" + blog.id}>
                   <h3>{blog.title}</h3>
-                  <Link to={"/blog/" + blog.id}>Read more</Link>
-                </div>
+                </Link>
               ))
             ) : (
               <>

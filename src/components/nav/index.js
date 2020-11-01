@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 import { userLogout } from "./../../util/action/users";
@@ -23,13 +23,22 @@ const Nav = () => {
           <nav className="navigation">
             <ul>
               <li>
-                <Link to="/home">Home</Link>
+                <NavLink activeClassName="active" to="/home" >
+                  Home
+                </NavLink>
+                {/* <Link to="/home">Home</Link> */}
               </li>
-              <li>
-                <Link to="/users">Users</Link>
+              <li>                
+                <NavLink activeClassName="active"  to="/users" >
+                  Users
+                </NavLink>
+                {/* <Link to="/users">Users</Link> */}
               </li>
-              <li>
-                <Link to="/blogs">Blogs</Link>
+              <li>             
+                <NavLink activeClassName="active"  to="/blogs" >
+                  Blogs
+                </NavLink>
+                {/* <Link to="/blogs">Blogs</Link> */}
               </li>
             </ul>
             <div className="logout" onClick={handleLogout}>

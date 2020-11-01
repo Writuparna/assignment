@@ -20,7 +20,7 @@ export default function PageRouting() {
         <PrivateRoute exact path="/home" component={Dashboard} />
         <PrivateRoute exact path="/users" component={Users} />
         <PrivateRoute exact path="/blogs" component={Blog} />
-        <PrivateRoute exact path="/blog/:blogId" component={BlogDetails} />
+        <PrivateRoute exact path="/blogs/:blogId" component={BlogDetails} />
         <PublicRoute exact path="/login" component={Login} />
         <Route component={NotFound} />
       </Switch>
