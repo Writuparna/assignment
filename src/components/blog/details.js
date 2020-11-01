@@ -20,13 +20,13 @@ const BlogDetails = (props) => {
   }, [blogData, props.match.params.blogId]);
   return (
     <div>
-      <button
+      <p className="goBack"
         onClick={() => {
           history.goBack();
         }}
       >
         Go back
-      </button>
+      </p>
 
       {!isFetching && details ? (
         <div className="blogDetails">
@@ -34,7 +34,7 @@ const BlogDetails = (props) => {
           <p>{details.body}</p>
         </div>
       ) : (
-        <div>Loading...</div>
+        <div className="loading">Loading...</div>
       )}
     </div>
   );

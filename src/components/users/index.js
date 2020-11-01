@@ -47,8 +47,9 @@ const Users = () => {
             ))}
           </div>
         </>
-      ) : (
-        "Loading..."
+      ) : (<div className="loading">
+        Loading...
+        </div>
       )}
     </div>
   );

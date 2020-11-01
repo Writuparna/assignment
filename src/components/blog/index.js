@@ -34,9 +34,9 @@ const Blog = () => {
 
   return (
     <div>
+      <h2>Blog</h2>
       {!isFetching ? (
         <>
-          <h2>Blog</h2>
           <div className="filterBar">
             <SelectBox
               filterType="Title"
@@ -72,8 +72,9 @@ const Blog = () => {
             )}
           </div>
         </>
-      ) : (
-        "Loading..."
+      ) : (<div className="loading">
+        Loading...
+        </div>
       )}
     </div>
   );

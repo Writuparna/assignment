@@ -34,7 +34,7 @@ const Login = (props) => {
       dispatch(setValidUser(userInfo));
       history.replace("/home");
     } else {
-      setError("User is invalid");
+      setError("Invalid user");
     }
   };
 

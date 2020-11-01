@@ -92,7 +92,15 @@ nav li a:hover,
 .blogDetails > p:first-letter {
   text-transform: capitalize;
 }
-
+.goBack {
+  color: rgb(4, 172, 250);
+  cursor: pointer;
+  font-size: 16px;
+  transition: ease 0.5s;
+}
+.goBack:hover {
+  color: #222;
+}
 .blockList > a.block {
   text-decoration: none;
   color: #222;
@@ -170,6 +178,10 @@ button:hover {
 .content {
   padding: 0 20px;
 }
+.content > div > h2,
+.loading {
+  padding: 0 10px;
+}
 
 .filterBar {
   display: flex;
@@ -221,6 +233,7 @@ button:hover {
     padding: 0;
     flex-flow: column;
     width: 100%;
+    align-items: center;
   }
   h1 {
     text-align: center;
