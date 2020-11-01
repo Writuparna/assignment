@@ -1,0 +1,291 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 18px;
+  margin: 0;
+  color: #fff;
+}
+p {
+  font-size: 12px;
+}
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: rgb(4, 172, 250);
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+h1 a {
+  color: #fff;
+  font-size: 18px;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+nav li {
+  display: inline-block;
+  list-style: none;
+}
+nav li a {
+  text-decoration: none;
+  padding: 0px 5px 0;
+  margin: 0px 5px 0;
+  color: #fff;
+}
+nav li a:hover,
+.logout:hover {
+  color: #eee;
+}
+.logout {
+  display: inline-block;
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+.blockList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.blockList > .block {
+  flex: 1 1 18%;
+}
+
+.block {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.block:hover {
+  border: 1px solid #bbb;
+}
+.block > h3 {
+  margin: 0;
+}
+.block > h3:first-letter {
+  text-transform: capitalize;
+}
+.blogDetails > h2:first-letter,
+.blogDetails > p:first-letter {
+  text-transform: capitalize;
+}
+
+.block a {
+  text-decoration: none;
+  color: rgb(4, 172, 250);
+}
+.login {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.loginBlock {
+  background: #eee;
+  padding: 30px 50px;
+  justify-content: center;
+  align-self: center;
+  flex-flow: column;
+  border-radius: 2px;
+  text-align: center;
+}
+.loginBlock > form > div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 90px;
+}
+
+.loginBlock h2 {
+  margin: 0 0 10px;
+}
+.loginBlock input {
+  padding: 3px 5px;
+  margin: 10px 0 0;
+  border: 1px solid #999;
+  border-radius: 2px;
+  height: 30px;
+  width: 250px;
+}
+.loginBlock label {
+  margin: 10px 0 0;
+}
+
+.loginBlock input:focus {
+  border: 1px solid #9e9e9e;
+  transition: ease 0.5s;
+}
+
+.error {
+  display: block;
+  margin: 0;
+  color: red;
+}
+
+button {
+  background-color: rgb(4, 172, 250);
+  color: #fff;
+  border: 1px solid rgb(1, 165, 241);
+  text-transform: uppercase;
+  padding: 5px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+button:hover {
+  background-color: rgb(4, 155, 224);
+}
+
+.content {
+  padding: 0 20px;
+}
+
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin: 20px 0;
+}
+.filterBar > h3 {
+  margin: 0 10px 0 0;
+}
+.selectBox select {
+  width: auto;
+  height: 30px;
+}
+.selectBox label {
+  margin: 0 10px;
+}
+
+.goToPage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  justify-content: center;
+  align-content: center;
+}
+.pageLink {
+  flex: 1 1 20%;
+  background: #eee;
+  border-radius: 2px;
+  margin: 20px;
+  text-align: center;
+  min-height: 40vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(4, 172, 250);
+  font-size: 50px;
+  text-transform: uppercase;
+}
+.pageLink:hover {
+  color: rgb(4, 155, 224);
+}
+
+@media only screen and (max-width: 575px) {
+  header {
+    padding: 0;
+    flex-flow: column;
+    width: 100%;
+  }
+  h1 {
+    text-align: center;
+    margin: 10px 0;
+  }
+  .navigation {
+    text-align: center;
+  }
+  .content {
+    width: 90%;
+    padding: 0;
+    margin: auto;
+  }
+  .blockList > .block {
+    flex: 1 1 90%; /*grow | shrink | basis */
+    margin: 10px 0;
+  }
+  .filterBar {
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .selectBox {
+    width: 100%;
+  }
+  .selectBox label {
+    width: 100%;
+    display: block;
+  }
+  .selectBox select {
+    width: 70%;
+    height: 30px;
+    margin: 10px 0;
+  }
+
+  .loginBlock {
+    padding: 20px;
+  }
+
+  .goToPage {
+    flex-flow: column;
+  }
+  .pageLink {
+    flex: 1 1 90%;
+    min-height: 20vh;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 575px) and (max-width: 768px) {
+  .blockList > .block {
+    flex: 1 1 45%; /*grow | shrink | basis */
+    margin: 10px;
+  }
+
+  .filterBar {
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .selectBox {
+    width: 100%;
+  }
+  .selectBox label {
+    width: 100%;
+    display: block;
+  }
+  .selectBox select {
+    width: 70%;
+    height: 30px;
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+  .blockList > .block {
+    flex: 1 1 30%; /*grow | shrink | basis */
+    margin: 10px;
+  }
+}
