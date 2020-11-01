@@ -57,7 +57,7 @@ const Login = (props) => {
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Add your email"
+                    placeholder="Email"
                   />
                   <ErrorMessage name="email">
                     {(errorMsg) => <div className="error">{errorMsg}</div>}
@@ -69,7 +69,7 @@ const Login = (props) => {
                     type="password"
                     id="password"
                     name="password"
-                    placeholder="password"
+                    placeholder="Password"
                   />
                   <ErrorMessage name="password">
                     {(errorMsg) => <div className="error">{errorMsg}</div>}
